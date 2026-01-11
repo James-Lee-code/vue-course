@@ -1,9 +1,7 @@
 <template>
   <header>
     <nav>
-      <h1>
-        <router-link to="/">Upgrade</router-link>
-      </h1>
+        <router-link to="/" class="logo-link"><img src="UP.png" alt="up" class="logo"></router-link>
       <ul>
         <li>
           <router-link to="/courses">所有課程</router-link>
@@ -48,6 +46,22 @@ header {
   align-items: center;
 }
 
+.logo-link {
+  padding: 0;
+  border: none;
+}
+
+.logo {
+  height: 3rem;
+  width: auto;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.logo-link:hover .logo {
+  transform: scale(1.05);
+}
+
 header a {
   text-decoration: none;
   color: #f391e3;
@@ -60,21 +74,6 @@ a:active,
 a:hover,
 a.router-link-active {
   border: 1px solid #f391e3;
-}
-
-h1 {
-  margin: 0;
-}
-
-h1 a {
-  color: white;
-  margin: 0;
-}
-
-h1 a:hover,
-h1 a:active,
-h1 a.router-link-active {
-  border-color: transparent;
 }
 
 header nav {
@@ -97,4 +96,6 @@ header ul {
 li {
   margin: 0 0.5rem;
 }
+
+
 </style>
